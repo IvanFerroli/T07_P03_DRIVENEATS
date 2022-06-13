@@ -5,6 +5,9 @@ html {
 * {
   box-sizing: border-box;
 }
+body{
+  background-color: #e5e5e5;
+}
 h1 {
   font-family: Righteous;
   font-weight: 400;
@@ -62,14 +65,16 @@ main {
   top: 93px;
   bottom: 93px;
   width: 100%;
-  height: auto;
-  background-color: #e5e5e5;
+  height: calc(100% - 186px);
 }
 .meal {
   margin-top: 30px;
   margin-left: 19px;
 
   height: 258px;
+}
+.meal:last-child{
+  height: 367px;
 }
 .options-container {
   margin-left: 0px;
@@ -111,11 +116,6 @@ main {
   font-size: 16px;
   color: #333333;
 }
-.option h4 {
-  font-weight: 700;
-  font-size: 16px;
-  color: #333333;
-}
 .pricetag {
   font-family: Roboto;
   font-weight: 400;
@@ -123,8 +123,6 @@ main {
   color: #000000;
 }
 footer {
-  z-index: 3;
-
   position: fixed;
   left: 0;
   bottom: 0;
@@ -157,5 +155,83 @@ letter-spacing: 0.018em;
 color: #FFFFFF;
 }
 .selected{
-    border: 5px solid #32b72f
+    border: 4px solid #32b72f
 }
+.check {
+    position: absolute;
+    right: 12px;
+    bottom: 10px;
+    font-size: 19px;
+    color: #32B72F;
+    display: none;
+  }
+  
+  .option.selected .check {
+    display: block;
+  }
+  
+  .confirm {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 19px;
+    font-size: 22px;
+  }
+  
+  .order-info {
+    background-color: #50D074;
+    color: #FFFFFF;
+    width: 377px;
+    height: 353px;
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, .25);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border-radius: 9px;
+  }
+  
+  .order-info * {
+    margin: 5px 26px;
+  }
+  
+  .order-info li {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .order-info button {
+    border-radius: 100px;
+    padding: 5px 10px;
+    color: var(--verde-claro);
+    font-weight: 700;
+    width: 333px;
+    height: 50px;
+    font-size: 22px;
+    border: none;
+  }
+  
+  .order-info button:hover {
+    cursor: pointer;
+  }
+  
+  .confirm .cancel {
+    text-align: center;
+  }
+  
+  .button-enabled {
+    background-color: #32B72F;
+    font-weight: 700;
+  }
+  
+  .hidden {
+    display: none;
+  }
