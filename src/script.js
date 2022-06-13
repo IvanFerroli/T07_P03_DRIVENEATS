@@ -56,13 +56,15 @@ function doubleCheckOrder() {
   document.querySelector(
     ".chosenMainMealPrice"
   ).innerHTML = `R$ ${mainPriceTag.toFixed(2)}`;
+
   document.querySelector(".chosenBeverage").innerHTML = beverage;
   document.querySelector(
     ".chosenBeveragePrice"
   ).innerHTML = `R$ ${beveragePriceTag.toFixed(2)}`;
+
   document.querySelector(".chosenDessert").innerHTML = dessert;
   document.querySelector(
-    ".chosendessertPrice"
+    ".chosenDessertPrice"
   ).innerHTML = `R$ ${dessertPriceTag.toFixed(2)}`;
 
   document.querySelector(".total").innerHTML = `R$ ${(
