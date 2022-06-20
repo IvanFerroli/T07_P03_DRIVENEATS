@@ -1,193 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Parrot's Card Game</title>
     <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=Playball&family=Recursive:wght@300;400;500;600;700;800;900&family=Righteous&family=Roboto:ital,wght@0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link
-        href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100;200;300;400;500;600;700;800;900&family=Lexend+Deca:wght@100;200;300;400;500;600;700;800;900&family=Playball&family=Recursive:wght@300;400;500;600;700;800;900&family=Righteous&family=Roboto:ital,wght@0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
 </head>
-
 <body>
     <header>
-        <h1>DrivenEats</h1>
-        <h3>Sua comida em 6 minutos</h3>
+        <h1>PARROT CARD GAME</h1>
+        <p>Tempo: <em>0</em> segundos</p>
     </header>
-    <main>
-        <section class="meal main">
-            <span class="sections-title">
-                <h2>
-                    Primeiro, seu prato
-                </h2>
-            </span>
-            <div class="options-container">
-                <article class="option" onclick="selectMainMeal(this, 'parmegiana', 19.90)" >
-                    <img src="../src/assets/img/Parmegiana.png" alt="parmegiana">
-                    <div class="option-info">
-                        <h3>Filé à parmegiana</h3>
-                    <h4>Acompanhamentos mostrados na imagem</h4>
-                    <span class="pricetag">R$19,90</span>
-                    <ion-icon class="check" name="checkmark-circle"></ion-icon>
-                    </div>
-                </article>
-                <article class="option" onclick="selectMainMeal(this, 'salmao', 39.90)" >
-                    <img src="../src/assets/img/salmão.png" alt="salmão">
-                    <div class="option-info">
-                        <h3>Salmão</h3>
-                    <h4>Acompanhamentos mostrados na imagem</h4>
-                    <span class="pricetag">R$39,90</span>
-                    <ion-icon class="check" name="checkmark-circle"></ion-icon>
-                    </div>
-                </article>
-                <article class="option" onclick="selectMainMeal(this, 'salgados', 4.90)" >
-                    <img src="../src/assets/img/salgados.png" alt="salgados">
-                    <div class="option-info">
-                        <h3>salgados</h3>
-                    <h4>Valor referente à unidade</h4>
-                    <span class="pricetag">R$4,90</span>
-                    <ion-icon class="check" name="checkmark-circle"></ion-icon>
-                    </div>
-                </article>
-                <article class="option" onclick="selectMainMeal(this, 'Ovo frito', 4.90)" >
-                    <img src="../src/assets/img/ovo-frito-38257.jpg" alt="Frango frango_yin_yang">
-                    <div class="option-info">
-                        <h3>Ovo frito</h3>
-                    <h4>Um ovo frito</h4>
-                    <span class="pricetag">R$4,90</span>
-                    <ion-icon class="check" name="checkmark-circle"></ion-icon>
-                    </div>
-                </article>
-            </div>
-        </section>
-        <section class="meal beverage">
-            <span class="sections-title">
-                <h2>
-                    Agora, sua bebida
-                </h2>
-            </span>
-            <div class="options-container">
-                <article class="option" onclick="selectBeverage(this, 'coca-cola', 4.90)" >
-                    <img src="../src/assets/img/coquinhaGelada.png" alt="coca-cola">
-                    <div class="option-info">
-                        <h3>Coca-cola</h3>
-                    <h4>Lata 350ml</h4>
-                    <span class="pricetag">R$4,90</span>
-                    <ion-icon class="check" name="checkmark-circle"></ion-icon>
-                    </div>
-                </article>
-                <article class="option" onclick="selectBeverage(this, 'mineral', 2.90)" >
-                    <img src="../src/assets/img/mineral.png" alt="Água mineral">
-                    <div class="option-info">
-                        <h3>mineral</h3>
-                    <h4>Garrafa de 500ml</h4>
-                    <span class="pricetag">R$2,90</span>
-                    <ion-icon class="check" name="checkmark-circle"></ion-icon>
-                    </div>
-                </article>
-                <article class="option" onclick="selectBeverage(this, 'h2oh', 4.90)" >
-                    <img src="../src/assets/img/h2oh.png" alt="h2oh">
-                    <div class="option-info">
-                        <h3>h2oh</h3>
-                    <h4>Garrafa de 500ml</h4>
-                    <span class="pricetag">R$4,90</span>
-                    <ion-icon class="check" name="checkmark-circle"></ion-icon>
-                    </div>
-                </article>
-                <article class="option" onclick="selectBeverage(this, 'energeticos', 10.90)" >
-                    <img src="../src/assets/img/energéticos.png" alt="energeticos">
-                    <div class="option-info">
-                        <h3>Energeticos</h3>
-                    <h4>Lata de 350ml</h4>
-                    <span class="pricetag">R$10,90</span>
-                    <ion-icon class="check" name="checkmark-circle"></ion-icon>
-                    </div>
-                </article>
-        </section>
-        <section class="meal dessert">
-            <span class="sections-title">
-                <h2>
-                    Por fim, sua sobremesa
-                </h2>
-            </span>
-            <div class="options-container">
-                <article class="option" onclick="selectDessert(this, 'pudim', 7.90)" >
-                    <img src="../src/assets/img/pudim.png" alt="pudim">
-                    <div class="option-info">
-                        <h3>pudim</h3>
-                    <h4>pudim</h4>
-                    <span class="pricetag">R$7,90</span>
-                    <ion-icon class="check" name="checkmark-circle"></ion-icon>
-                    </div>
-                </article>
-                <article class="option" onclick="selectDessert(this, 'mousse', 7.90)" >
-                    <img src="../src/assets/img/mousse.png" alt="mousse">
-                    <div class="option-info">
-                        <h3>mousse</h3>
-                    <h4>mousse</h4>
-                    <span class="pricetag">R$4,90</span>
-                    <ion-icon class="check" name="checkmark-circle"></ion-icon>
-                    </div>
-                </article>
-                <article class="option" onclick="selectDessert(this, 'brigadeiro', 4.90)" >
-                    <img src="../src/assets/img/brigadeiro.png" alt="Frango frango_yin_yang">
-                    <div class="option-info">
-                        <h3>brigadeiro</h3>
-                    <h4>brigadeiro</h4>
-                    <span class="pricetag">R$4,90</span>
-                    <ion-icon class="check" name="checkmark-circle"></ion-icon>
-                    </div>
-                </article>
-                <article class="option" onclick="selectDessert(this, 'donut', 7.90)" >
-                    <img src="../src/assets/img/donut.png" alt="donut">
-                    <div class="option-info">
-                        <h3>donut</h3>
-                    <h4>donut</h4>
-                    <span class="pricetag">R$7,90</span>
-                    <ion-icon class="check" name="checkmark-circle"></ion-icon>
-                    </div>
-                </article>
-        </section>
-    </main>
-    <aside class="confirm hidden">
-        <div class="order-info">
-          <h1>Confirme seu pedido</h1>
-          <ul>
-            <li>
-              <div class="chosenMainMeal">nenhum</div>
-              <div class="chosenMainMealPrice">R$ 0.0</div>
-            </li>
-            <li>
-              <div class="chosenBeverage">nenhum</div>
-              <div class="chosenBeveragePrice">R$ 0.0</div>
-            </li>
-            <li>
-              <div class="chosenDessert">nenhum</div>
-              <div class="chosenDessertPrice">R$ 0.0</div>
-            </li>
-            <li>
-              <div class="total">TOTAL</div>
-              <div class="orderTotal"></div>
-            </li>
-            <button onclick="checkout()">Tudo certo! Pode pedir!</button>
-            <p class="cancel" onclick="orderReDo()">Cancelar</p>
-          </ul>
-        </div>
-      </aside>
-    <footer>
-        <button onclick="doubleCheckOrder()" disabled>Selecione os 3 itens para fechar o pedido</button>
-    </footer>
-    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <script src="../src/script.js"></script>
+    <main></main>
+    <script src="../script.js"></script>
 </body>
-
 </html>
